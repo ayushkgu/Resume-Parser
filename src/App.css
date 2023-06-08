@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: rgb(250, 249, 246);
+  background-color:whitesmoke;
   height: 100vh;
   width: 100vw;
 
@@ -14,10 +14,133 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  /**color: white; **/
+}
+.border{
+  padding: 5px;
+  background: linear-gradient(110deg, #e6f7ff 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #cce6ff 34%,  #ccccff 34%);
+  height: 400px;
+  background-position: 25% 50%;
+
+}
+.inner-cutout{
+  padding: 40px 0;
+  display: block;
+  background-color:rgb(248, 248, 249);
+    
+  margin: 2%;
+  padding-bottom: 40px;
+  height: 300px;
+  background-size: 300%;
+  background-position:50% 50%;
+
+}
+.site-title {
+  vertical-align: middle;
+  text-align: center;
+  font-size:50pt;
+  background: linear-gradient(110deg, #618292 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #ccccff 34%, #ccccff 34%);
+  font-family:SpaceGrotesk-Light;
+   line-height: 1.2;
+   font-weight: 700;
+   font-size: 64px;
+   margin-bottom: 40px;
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   
+}
+
+.main{
+  width: 800px;
+  align-content: center;
+  height: auto;
+  margin-left: 20%;
+  margin-right:20%;
+  margin-top: 10%;
+}
+
+.upload-directions{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:700;
+}
+
+.search-directions{
+  font-family:SpaceGrotesk-Light;
+  font-weight:700;
+}
+.searchbar{
+  border: 2px solid purple;
+  text-align: center;
+  background: white;
+  border-radius: 35px 35px 35px 35px;
+  max-width:fit-content;
+  max-height: fit-content;
+}
+.searchbar:hover{
+  border-radius: 35px 35px 35px 35px;
+  border: 2px solid purple;
+  box-shadow: mediumorchid;
+}
+
+.searchbar:focus{
+  border-radius: 35px 35px 35px 35px;
+  border: 2px solid purple;
 }
 
 
+.button{
+  background-color: whitesmoke;
+  border: 0;
+  border-radius: .5rem;
+  box-sizing:border-box;
+  color: #111827;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size:medium;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  max-width:fit-content;
+  max-height: fit-content;
+}
+
+.button:hover {
+  background-color:lavender;
+}
+
+.button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button:focus-visible {
+  box-shadow: none;
+}
+
+.button-space {
+  margin-left: 50px;
+}
+.navbar
+{
+  background-color: whitesmoke;
+}
+.navbar-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-nav{
+  font-family:serif;
+  font-weight: 700;
+  font-size: 20px;
+}
 .navbar-logo {
   padding-left: 5px;
   width: 40px; /* Adjust the width as needed */

@@ -16,10 +16,17 @@ function Upload() {
       
       return (
         <div className="App">
-          <h1> Resume-Parser</h1>
-          <h4>Drag and drop a resume file here, or click to select a file </h4> 
-          <input type="file" onChange={(e)=>{setImage(e.target.files[0])}}/>
-          <button onClick={upload}>Upload</button>
+          <div class="main">
+            <div class = "border">
+              <div class = "inner-cutout"> 
+          <h1 className = "site-title"> Resume Parser</h1>
+          <h4 className = "upload-directions">Choose a file to upload below </h4>
+          <br/> <br/> 
+          <input className = "button" type="file" onChange={(e)=>{setImage(e.target.files[0])}}/>
+          <button className = "button" onClick={upload}>Upload</button>
+        </div>
+        </div>
+        </div>
         </div>
       );
     }
