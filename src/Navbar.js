@@ -5,7 +5,7 @@ import "./App.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg fixed-top">
       <a className="navbar-brand" href="#"> 
         <img src={logo} alt="ResumeParser-logo" className="navbar-logo" />
       </a>

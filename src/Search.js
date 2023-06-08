@@ -22,7 +22,7 @@ function Search() {
     };
   
     return (
-      <div className="App">
+      <div className="App content">
         <h1 className = "search-directions">Enter your desired keywords: </h1>
         <br/> <br/>
         <form onSubmit={handleSubmit}>
