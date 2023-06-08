@@ -23,8 +23,9 @@ function Search() {
   
     return (
       <div className="App content">
-        <h1 className = "search-directions">Enter your desired keywords: </h1>
-        <br/> <br/>
+        <br /> <br />
+        <h1 className = "search-directions">Enter keywords to parse resume: </h1>
+        <br/>
         <form onSubmit={handleSubmit}>
           <input
             className="searchbar"
