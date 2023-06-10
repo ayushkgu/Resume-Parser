@@ -1,0 +1,68 @@
+Java
+JavaScript
+Python
+C++
+C#
+Ruby
+PHP
+Swift
+Kotlin
+TypeScript
+HTML
+CSS
+Angular
+React
+Vue.js
+Ember.js
+Node.js
+Express.js
+Django
+Flask
+Spring Boot
+ASP.NET
+Laravel
+Symfony
+jQuery
+Databases
+SQL
+MySQL
+NoSQL
+PostgreSQL
+MongoDB
+Redis
+Oracle
+SQLite
+MariaDB
+Firebase
+NoSQL
+Git
+Version Control
+Agile
+Scrum
+RESTful
+API
+JSON
+XML
+Front-end Development
+Back-end Development
+Full-stack Development
+Object-oriented Programming (OOP)
+Functional Programming
+Test-driven Development (TDD)
+Continuous Integration/Continuous Delivery (CI/CD)
+Responsive Web Design
+Mobile Development
+Cloud Computing
+Microservices
+Big Data
+Machine Learning
+Artificial Intelligence (AI)
+Data Structures
+Algorithms
+Software Development Life Cycle (SDLC)
+Debugging
+Security
+Networking
+Linux
+Windows
+macOS
