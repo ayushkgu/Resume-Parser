@@ -12,6 +12,7 @@ import {getResumesForKeyword, getResumeKeywords} from "./firestoreLookup"
 function Search() {
     const [searchQuery, setSearchQuery] = useState('');
     const [dataTable, setDataTable] = useState([]);
+    const [searchDone, setSearchDone] = useState('');
     const handleInputChange = (event) => {
       setSearchQuery(event.target.value);
     };
@@ -19,7 +20,7 @@ function Search() {
     const handleSubmit = async (event) => {
       event.preventDefault();
       console.log('Search query:', searchQuery);
-    
+      setSearchDone(searchQuery);
       // Reset the search query
       // firestore code to lookup relevant resumes goes here
       const data = await getResumeKeywords(searchQuery);
@@ -41,6 +42,7 @@ function Search() {
           />
           <button className = "button" type="submit">Search</button>
         </form>
+        <h2>Results for search query "{searchDone}" below</h2>
         <Table data={dataTable}></Table>
       </div>
     );
