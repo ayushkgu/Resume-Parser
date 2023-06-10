@@ -23,9 +23,10 @@ async function addResumeTOKeywords(keyword, resumeName) {
 
 async function addResumeToCollection(resumeName, resumeLink) {
   const docRef = db.collection("resumes").doc(resumeName);
+  var urlLink = 'https://firebasestorage.googleapis.com/v0/b/resume-parser-a7584.appspot.com/o/images%2F' + resumeName + '?alt=media';
   await docRef.set(
     { 
-      url: resumeLink,
+      url: urlLink,
     },
     { merge: true }
   );
@@ -43,7 +44,7 @@ function ResumeUpdater() {
     }
 
     // addResumeToCollection("resume1", "johnny", "gdrive.com/resume1.pdf");
-  
+
 }
 
 export { addResumeTOKeywords, addResumeToCollection, ResumeUpdater };
