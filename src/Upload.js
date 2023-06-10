@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import storage from "./firebase";
 import "./App.css";
 import { Parse } from "./parser";
-import { addResumeTOKeywords, addResumeToCollection } from "./firestoreRes";
+import { addResumeTOKeywords, addResumeToCollection} from "./firestoreRes";
 
 function Upload() {
   const [image, setImage] = useState("");
@@ -30,6 +30,7 @@ function Upload() {
     console.log('resume name is ' + image.name);
     console.log(keywords);
     addResumeToCollection(image.name, "");
+  
     storage
       .ref(`/images/${image.name}`)
       .put(image)

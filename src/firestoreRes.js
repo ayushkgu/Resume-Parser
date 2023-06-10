@@ -32,6 +32,15 @@ async function addResumeToCollection(resumeName, resumeLink) {
   );
 }
 
+async function getKeywords(keyword) {
+  const snapshot = await db.collection('keywords').get();
+  return snapshot.docs.find(el=> el.id.includes(keyword));
+
+  // const snapshot = await db.collection('keywords').where("id", "==", "java").get();
+
+}
+
+
 function ResumeUpdater() {
   
     let keywordList = ["c++", "java", "react"];
@@ -47,5 +56,5 @@ function ResumeUpdater() {
 
 }
 
-export { addResumeTOKeywords, addResumeToCollection, ResumeUpdater };
+export { addResumeTOKeywords, addResumeToCollection, getKeywords, ResumeUpdater };
 
