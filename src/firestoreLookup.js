@@ -44,7 +44,7 @@ export async function getResumeKeywords(keywords)
     let allResumes = [];
     for(let keyword of keywordArr)
     {
-        let resumes = await getResumesForKeyword(keyword.trim());
+        let resumes = await getResumesForKeyword(keyword.toLowerCase().trim());
         if(resumes !== null)
 {        for(let resume of resumes)
         {
