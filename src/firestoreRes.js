@@ -33,17 +33,22 @@ async function addResumeToCollection(resumeName, resumeLink) {
 
 function ResumeUpdater() {
   
-    let keywordList = ["c++", "java", "react"];
+  let keywordList = [];
 
-    for (let word of keywordList) {
-      console.log("word" + word);
-      for (let i = 1; i <= 3; i++) {
-        addResumeTOKeywords(word, "resume" + i);
-      }
-    }
+  //reads all keywords from file
+  const data = fs.readFileSync('keywords.txt', 'utf8');
+  //adds keywords to list
+  keywordList = data.split('\n');
 
-    // addResumeToCollection("resume1", "johnny", "gdrive.com/resume1.pdf");
-  
+for(let i = 0; i < keywordList.length; i++)
+{
+  addResumeTOKeywords(word, "resume" + (i+1));
+}
+//to test
+for(let word of keywordList)
+{
+  console.log(word);
+}
 }
 
 export { addResumeTOKeywords, addResumeToCollection, ResumeUpdater };
