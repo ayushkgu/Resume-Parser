@@ -4,18 +4,23 @@ import { addResumeTOKeywords } from './firestoreRes';
 export const Parse = () => {
   const [keywords, setKeywords] = useState(new Map());
   const [resumeName, setResumeName] = useState('');
+  const [linesArray, setLinesArray] = useState([]);
 
-  const initKeyWords = () => {
-    const keyWordArray = ["c++", "java", "react", "python", "sql"];
-    let newMap = new Map();
+    async function initKeyWords() {
+      const response = await fetch('keywords.txt');
+      const text = await response.text();
+      const lines = text.split('\n');
 
-    keyWordArray.forEach(word => {
-      const wordx = word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").toLowerCase();
-      newMap.set(wordx, 0);
-    });
+      let newMap = new Map();
 
-    setKeywords(newMap);
-  }
+      lines.forEach(word => {
+        const wordx = word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").toLowerCase();
+        newMap.set(wordx, 0);
+      });
+
+      return newMap;
+  };
+  
 
   const checkRes = (resume) => {
     let resumeSplit = resume.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").toLowerCase().split(/\s+/);
@@ -28,7 +33,12 @@ export const Parse = () => {
 
   const handleParse = (newResumeName, resName) => {
     setResumeName(resName);
-    initKeyWords();
+    initKeyWords()
+    .then(function(result) {
+      console.log(result);
+      setKeywords(result); 
+    });
+    
     checkRes(newResumeName);
   }
 
