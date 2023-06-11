@@ -6,20 +6,26 @@ import "./App.css";
 import {ref} from "firebase/storage"
 import { useRef } from 'react';
 import Upload from './Upload';
+import Table from './Table';
+import {getResumesForKeyword, getResumeKeywords} from "./firestoreLookup"
 
 function Search() {
     const [searchQuery, setSearchQuery] = useState('');
-  
+    const [dataTable, setDataTable] = useState([]);
+    const [searchDone, setSearchDone] = useState('');
     const handleInputChange = (event) => {
       setSearchQuery(event.target.value);
     };
-  
-    const handleSubmit = (event) => {
+
+    const handleSubmit = async (event) => {
       event.preventDefault();
       console.log('Search query:', searchQuery);
+      setSearchDone(searchQuery);
       // Reset the search query
-      setSearchQuery('');
-    };
+      // firestore code to lookup relevant resumes goes here
+      const data = await getResumeKeywords(searchQuery);
+      setDataTable(data);
+      };
   
     return (
       <div className="App content">
@@ -36,6 +42,8 @@ function Search() {
           />
           <button className = "button" type="submit">Search</button>
         </form>
+        <h2>Results for search query "{searchDone}" below</h2>
+        <Table data={dataTable}></Table>
       </div>
     );
   }
