@@ -30,7 +30,7 @@ function Search() {
     return (
       <div className="App content">
         <br /> <br />
-        <h1 className = "search-directions">Enter keywords to parse resume: </h1>
+        <h1 className = "search-directions">Enter keywords to parse resumes: </h1>
         <br/>
         <form onSubmit={handleSubmit}>
           <input
